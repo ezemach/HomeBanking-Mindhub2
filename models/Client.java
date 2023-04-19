@@ -19,15 +19,16 @@ public class Client {
     private long id;
     private String firstName;
     private String lastName;
-
     private String email;
-
 
     @OneToMany(mappedBy="owner", fetch=FetchType.EAGER)
     private Set<Account> accounts = new HashSet<>();
 
     @OneToMany(mappedBy="owner", fetch=FetchType.EAGER)
     private Set<ClientLoan> clientLoans = new HashSet<>();
+
+    @OneToMany(mappedBy="owner", fetch=FetchType.EAGER)
+    private Set <Card> cards = new HashSet<>();
 
 
     public Client () {}
@@ -39,18 +40,6 @@ public class Client {
         this.email = mail;
     }
 
-    public Set<Account> getAccounts(){
-        return accounts;
-    }
-
-    public void addAccount (Account account){
-        account.setOwner(this);
-        accounts.add(account);
-    }
-
-    public void setAccounts(Set<Account> accounts) {
-        this.accounts = accounts;
-    }
     public String getFirstName() {
         return firstName;
     }
@@ -84,6 +73,34 @@ public class Client {
         this.id = id;
     }
 
+
+    public Set<Account> getAccounts(){
+        return accounts;
+    }
+
+    public void addAccount (Account account){
+        account.setOwner(this);
+        accounts.add(account);
+    }
+
+    public void setAccounts(Set<Account> accounts) {
+        this.accounts = accounts;
+    }
+
+    public Set<Card> getCards() {
+        return cards;
+    }
+
+    public void setCards(Set<Card> cards) {
+        this.cards = cards;
+    }
+
+    public void addCard (Card card){
+        card.setOwner(this);
+        cards.add(card);
+    }
+
+
     public void addClientLoan(ClientLoan clientLoan) {
         clientLoan.setOwner(this);
         clientLoans.add(clientLoan);
@@ -102,9 +119,5 @@ public class Client {
         return clientLoans.stream().map(sub -> sub.getLoan()).collect(toList());
     }
 
-
-//    public String toString() {
-//        return firstName + " " + lastName + " " + email;
-//    }
 
 }
