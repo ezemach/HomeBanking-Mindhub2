@@ -15,8 +15,8 @@ public class Card {
     private long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="owner_id")
-    private Client owner;
+    @JoinColumn(name="client_id")
+    private Client client;
 
     private String cardholder;
 
@@ -54,12 +54,12 @@ public class Card {
         this.id = id;
     }
 
-    public Client getOwner() {
-        return owner;
+    public Client getClient() {
+        return client;
     }
 
-    public void setOwner(Client owner) {
-        this.owner = owner;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
 

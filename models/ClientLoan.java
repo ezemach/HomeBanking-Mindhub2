@@ -19,7 +19,7 @@ public class ClientLoan {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="client_id")
-    private Client owner;
+    private Client client;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="loan_id")
@@ -66,12 +66,12 @@ public class ClientLoan {
         payments = payments;
     }
 
-    public Client getOwner() {
-        return owner;
+    public Client getClient() {
+        return client;
     }
 
-    public void setOwner(Client owner) {
-        this.owner = owner;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public Loan getLoan() {

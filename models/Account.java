@@ -22,8 +22,8 @@ public class Account {
     private double balance;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="owner_id")
-    private Client owner;
+    @JoinColumn(name="client_id")
+    private Client client;
 
     @OneToMany(mappedBy="account", fetch=FetchType.EAGER)
     private Set<Transaction> transactions = new HashSet<>();
@@ -75,12 +75,12 @@ public class Account {
     }
 
     @JsonIgnore
-    public Client getOwner(){
-        return owner;
+    public Client getClient(){
+        return client;
     }
 
-    public void setOwner (Client owner){
-        this.owner = owner;
+    public void setClient (Client client){
+        this.client = client;
     }
 
     public long getId() {

@@ -21,23 +21,26 @@ public class Client {
     private String lastName;
     private String email;
 
-    @OneToMany(mappedBy="owner", fetch=FetchType.EAGER)
+    private String password;
+
+    @OneToMany(mappedBy="client", fetch=FetchType.EAGER)
     private Set<Account> accounts = new HashSet<>();
 
-    @OneToMany(mappedBy="owner", fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="client", fetch=FetchType.EAGER)
     private Set<ClientLoan> clientLoans = new HashSet<>();
 
-    @OneToMany(mappedBy="owner", fetch=FetchType.EAGER)
+    @OneToMany(mappedBy="client", fetch=FetchType.EAGER)
     private Set <Card> cards = new HashSet<>();
 
 
     public Client () {}
 
 
-    public Client(String first, String last, String mail) {
+    public Client(String first, String last, String email, String password) {
         this.firstName = first;
         this.lastName = last;
-        this.email = mail;
+        this.email = email;
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -79,7 +82,7 @@ public class Client {
     }
 
     public void addAccount (Account account){
-        account.setOwner(this);
+        account.setClient(this);
         accounts.add(account);
     }
 
@@ -96,13 +99,13 @@ public class Client {
     }
 
     public void addCard (Card card){
-        card.setOwner(this);
+        card.setClient(this);
         cards.add(card);
     }
 
 
     public void addClientLoan(ClientLoan clientLoan) {
-        clientLoan.setOwner(this);
+        clientLoan.setClient(this);
         clientLoans.add(clientLoan);
     }
 
@@ -120,4 +123,11 @@ public class Client {
     }
 
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
