@@ -1,0 +1,579 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+#imagenLogo {
+    border: solid 1px black;
+    border-radius: 20%;
+}
+
+
+#app h1 {
+    font-size: 60px;
+    color: #fff;
+    position: relative
+}
+
+.DEBIT {
+    color: rgb(80, 16, 16) !important;
+}
+
+.CREDIT {
+    color: rgb(5, 40, 5) !important;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+
+
+main {
+    min-height: 75vh;
+}
+
+footer {
+    min-height: 30vh;
+}
+
+.GOLD {
+    background-color: #a57b09;
+    background-size: cover;
+}
+
+.TITANIUM {
+    background-color: #7f7f7f;
+    background-size: cover;
+}
+
+#imagenCard {
+    position: center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/cardBanco3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+
+}
+
+#btnNewAcc {
+    width: 200px;
+    background-color: #282d32;
+    border-radius: 5%;
+}
+
+#btnNewAcc:hover {
+    border: 1px solid #fbceb5;
+    background-color: white;
+    color: white;
+}
+
+nav {
+    min-height: 10vh;
+    background: none;
+    background-color: #282d32;
+    height: 8vh;
+    color: #f0ebdc;
+
+}
+
+
+nav li {
+    border-bottom: 2px solid transparent;
+    position: relative;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+
+nav li:before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: rgb(227, 210, 210);
+    color: aqua;
+    transition: width 0.3s ease-out;
+    transform-origin: left;
+}
+
+nav li:hover:before {
+    width: 100%;
+    transition: width 0.3s ease-out;
+    transform-origin: right;
+
+}
+
+main.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+main.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+main.masthead .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+    main.masthead {
+        padding-top: 17rem;
+        padding-bottom: 12.5rem;
+    }
+
+    main.masthead .masthead-subheading {
+        font-size: 2.25rem;
+        font-style: italic;
+        line-height: 2.25rem;
+        margin-bottom: 2rem;
+    }
+
+    main.masthead .masthead-heading {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        margin-bottom: 4rem;
+    }
+}
+
+
+
+.footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+}
+
+.footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.footer-dark ul a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0;
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.footer-dark .item.social>a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+.footer-dark .item.social>a:hover {
+    opacity: 0.9;
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+
+.card-container {
+    padding: 100px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+.profile-card-6 {
+    max-width: 300px;
+    max-height: 400px;
+    /* background-color: #FFF; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.profile-card-6 img {
+    transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFF;
+    padding: 15px 20px;
+    background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+    transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-position {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    left: 30px;
+    top: 100px;
+    transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-overview {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+    color: #FFF;
+    padding: 50px 0px 20px 0px;
+    transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-overview h3 {
+    font-weight: bold;
+}
+
+.profile-card-6 .profile-overview p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-card-6:hover img {
+    filter: brightness(80%);
+}
+
+.profile-card-6:hover .profile-name {
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+.profile-card-6:hover .profile-position {
+    left: 40px;
+}
+
+.profile-card-6:hover .profile-overview {
+    padding-bottom: 25px;
+}
+
+/* .profile-card-7 {
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.profile-card-7 .profile-content {
+    padding: 60px 30px 30px 30px;
+    background-color: #FFF;
+    position: relative;
+}
+
+.profile-card-7 .profile-content img {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: -40px;
+    border: 5px solid #FFF;
+}
+
+.profile-card-7 .profile-content .profile-name {
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    top: -35px;
+    left: 125px;
+    color: #FFF;
+}
+
+.profile-card-7 .profile-overview {
+    padding: 5px 0px;
+}
+
+.profile-card-7 .profile-overview p {
+    color: #777;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.profile-card-7 .profile-overview h5 {
+    color: #142437;
+    font-weight: bold;
+}
+
+.profile-card-8 {
+    background: linear-gradient(#09121c, #36445a);
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.profile-card-8 .profile-name {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 25px;
+    color: #58d683;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.profile-card-8 .profile-designation {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.profile-card-8 .profile-icons {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 80px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-card-8 .profile-icons .fa {
+    margin: 5px;
+}
+
+.profile-card-8:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.profile-card-9 {
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    padding: 30px 15px;
+    background-color: #FFF;
+    transition: all 0.25s linear;
+}
+
+.profile-card-9 img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.profile-card-9 .profile-name {
+    font-size: 15px;
+    color: #3249b9;
+    font-weight: 600;
+}
+
+.profile-card-9 .profile-designation {
+    font-size: 13px;
+    color: #777;
+}
+
+.profile-card-9 .profile-description {
+    padding: 10px;
+    font-size: 13px;
+    color: #777;
+    margin: 15px 0px;
+    background-color: #F1F2F3;
+    border-radius: 5px;
+}
+
+.profile-card-9 a {
+    padding: 10px 15px;
+    background-color: #3249b9;
+    color: #FFF;
+    font-size: 11px;
+    border-radius: 25px;
+}
+
+.profile-card-9:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.profile-card-10 {
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    padding: 30px 15px;
+    background-color: #1f2124;
+    color: #EEE;
+}
+
+.profile-card-10 img {
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    box-shadow: 0px 0px 0px 2px #64c17b;
+    transition: all 0.25s linear;
+}
+
+.profile-card-10 .profile-name {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.profile-card-10 .profile-location {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.profile-card-10 .profile-description {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.profile-card-10 .profile-icons .fa {
+    color: #ffc75e;
+    margin: 10px;
+}
+
+.profile-card-10:hover img {
+    transform: scale(1.1);
+} */
+
+.container {
+    position: absolute;
+
+}
+
+table {
+    width: 600px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    font-family: sans-serif;
+
+}
+
+th td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover tr:hover {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+
+}
