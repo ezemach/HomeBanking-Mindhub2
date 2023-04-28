@@ -29,6 +29,8 @@ public class WebAuthorization {
                 .antMatchers("/web/admin/**").hasAuthority("ADMIN")
                 .antMatchers("/h2-console").hasAuthority("ADMIN")
                 .antMatchers("/rest/**").hasAuthority("ADMIN")
+                .antMatchers("/api/clients/current/accounts").hasAuthority("CLIENT")
+                .antMatchers("/api/clients/current/cards").hasAuthority("CLIENT")
                 .antMatchers("/web/accounts.html").hasAuthority("CLIENT")
                 .antMatchers("/web/account.html").hasAuthority("CLIENT")
                 .antMatchers("/web/cards.html").hasAuthority("CLIENT");
